@@ -1,0 +1,65 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+
+	{% block navbar %}
+        <!-- Header -->
+        <header class="header" role="banner">
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="{{ path("tncy_school_index") }}">TNCY</a>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        {{ knp_menu_render('main',{'currentClass': 'active','template': 'TNCYSchoolBundle:Default:knp_menu.html.twig'}) }}
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </div>
+                <!-- /.container -->
+            </nav>
+        </header>
+    {% endblock %}
+    {% block container %}
+
+    {% endblock %}
+    <!-- Footer -->
+    <footer class="footer hidden-xs">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <address class="adresse" itemscope itemtype="http://schema.org/LocalBusiness">
+                     <h4><span itemprop="name">TNCY </span></h4>
+                     <h5> <span itemprop="description">{{"Télécom Nancy, anciennement École supérieure d'informatique et applications de Lorraine ou ÉSIAL, est une école d’ingénieurs créée en 1990." | trans}}</span></h5>
+                     <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                        <span itemprop="streetAddress">193 Avenue Paul Muller,</span><br>
+                        <span itemprop="postalCode">54602</span>
+                        <span itemprop="addressLocality">Villers-lès-Nancy</span>
+                    </div>
+                    Tel: <span itemprop="telephone">03 83 68 26 00</span>
+                </address>
+            </div>
+            <div class="col-md-4">
+                <a class="flag-france" href="{{ path(app.request.attributes.get('_route'), {"_locale": "fr"}) }}">FR</a>
+                <a class="flag-uk" href="{{ path(app.request.attributes.get('_route'), {"_locale": "en"}) }}">EN</a>
+            </div>
+            <div class="col-md-3">
+                <div class="pull-right"> 
+                    <small>Copyright {{"now"|date('Y')}} | TNCY.</small>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</footer>
+
+
+{% endblock body %}

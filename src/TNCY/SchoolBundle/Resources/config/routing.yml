@@ -1,0 +1,4 @@
+tncy_school_index:
+    path:     /
+    defaults: { _controller: TNCYSchoolBundle:Default:index }
+
