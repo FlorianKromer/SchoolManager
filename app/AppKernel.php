@@ -28,6 +28,13 @@ class AppKernel extends Kernel
             new Sonata\UserBundle\SonataUserBundle('FOSUserBundle'),
             new Application\Sonata\UserBundle\ApplicationSonataUserBundle(),
 
+            //media
+            new JMS\SerializerBundle\JMSSerializerBundle(),
+            new Sonata\ClassificationBundle\SonataClassificationBundle(),
+            new Application\Sonata\ClassificationBundle\ApplicationSonataClassificationBundle(),
+            new Sonata\MediaBundle\SonataMediaBundle(),
+            new Application\Sonata\MediaBundle\ApplicationSonataMediaBundle(),
+
             //Seo
             new Sonata\SeoBundle\SonataSeoBundle(),
 
@@ -41,6 +48,9 @@ class AppKernel extends Kernel
             // Routing JS
             new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
 
+            //api
+            new Misd\GuzzleBundle\MisdGuzzleBundle(),
+
             new TNCY\SchoolBundle\TNCYSchoolBundle(),
 
             new AppBundle\AppBundle(),
@@ -53,6 +63,7 @@ class AppKernel extends Kernel
             $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
             $bundles[] = new Sensio\Bundle\DistributionBundle\SensioDistributionBundle();
             $bundles[] = new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle();
+            $bundles[] = new Bazinga\Bundle\FakerBundle\BazingaFakerBundle();
         }
 
         return $bundles;

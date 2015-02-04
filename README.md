@@ -21,4 +21,5 @@ In order to configure the project:
 	php app/console doctrine:database:create
 	php app/console doctrine:schema:update --force
 	php app/console fos:user:create 
-	php app/console fos:user:promote (set the admin role :"ROLE_SONATA_ADMIN")
+	php app/console fos:user:promote (set the admin role :"ROLE_SUPER_ADMIN")
+	php app/console faker:populate (for dev env)

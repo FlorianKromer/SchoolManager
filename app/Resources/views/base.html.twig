@@ -13,7 +13,7 @@
 
 
     {% block stylesheets %}
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+            <link rel="stylesheet" href="{{ asset('bundles/tncyschool/css/bootstrap.min.css') }}">
             <link rel="stylesheet" href="{{ asset('bundles/tncyschool/css/main.css') }}">
             <link rel="stylesheet" href="{{ asset('bundles/tncyschool/css/print.css') }}">
     {% endblock %}
@@ -41,16 +41,16 @@
 
     {% block javascripts %}
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-            <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-            {% javascripts
-                '@TNCYSchoolBundle/Resources/public/js/vendor/ripples.min.js'
-                '@TNCYSchoolBundle/Resources/public/js/vendor/material.min.js'
-                '@TNCYSchoolBundle/Resources/public/js/main.js'
-                output='js/compiled/main.js'
-            %}
-                <script src="{{ asset_url }}"></script>
-            {% endjavascripts %}
+        {% javascripts
+            '@TNCYSchoolBundle/Resources/public/js/vendor/jquery.min.js'
+            '@TNCYSchoolBundle/Resources/public/js/vendor/bootstrap.min.js'
+            '@TNCYSchoolBundle/Resources/public/js/vendor/ripples.min.js'
+            '@TNCYSchoolBundle/Resources/public/js/vendor/material.min.js'
+            '@TNCYSchoolBundle/Resources/public/js/main.js'
+            output='js/compiled/main.js'
+        %}
+            <script src="{{ asset_url }}"></script>
+        {% endjavascripts %}
 
         <script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
         <script src="{{ path('fos_js_routing_js', {"callback": "fos.Router.setData"}) }}"></script>

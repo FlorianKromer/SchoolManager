@@ -9,6 +9,19 @@
         <id name="id" column="id" type="integer">
             <generator strategy="AUTO" />
         </id>
+        <field name="github"    type="string"     column="github" length="64"    nullable="true" />
+        <many-to-one field="schoolClass" target-entity="TNCY\SchoolBundle\Entity\SchoolClass"></many-to-one>
+        <many-to-one field="avatar" target-entity="Application\Sonata\MediaBundle\Entity\Media">
+            <cascade>
+                <cascade-all/>
+            </cascade>
+        </many-to-one>
+        <many-to-one field="background" target-entity="Application\Sonata\MediaBundle\Entity\Media">
+            <cascade>
+                <cascade-all/>
+            </cascade>
+        </many-to-one>
+
 
     </entity>
 

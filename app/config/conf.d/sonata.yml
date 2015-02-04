@@ -1,6 +1,6 @@
 sonata_admin:
-    title:      Admin
-    title_logo: bundles/tncyschool/img/logo.svg
+    title:      " "
+    title_logo: bundles/tncyschool/img/logo.png
     templates:
         search:              SonataAdminBundle:Core:search.html.twig
         search_result_block: SonataAdminBundle:Block:block_search_result.html.twig
@@ -19,14 +19,29 @@ sonata_admin:
         object_permissions: [VIEW, EDIT, DELETE, UNDELETE, OPERATOR, MASTER, OWNER]
     dashboard:
         groups:
-            nvligue.admin.group.content:
-                label: Dashboard
+            tncyschool.admin.group.user:
+                label: User
                 label_catalogue: TNCYSchoolBundle
                 icon: '<i class="fa fa-cogs"></i>'
                 items:
                     - sonata.user.admin.user
                     - sonata.user.admin.group
-
+            tncyschool.admin.group.classification:
+                label: Classification
+                label_catalogue: TNCYSchoolBundle
+                icon: '<i class="fa fa-cogs"></i>'
+                items:
+                    - sonata.classification.admin.category
+                    - sonata.classification.admin.collection
+                    - sonata.classification.admin.tag
+            tncyschool.admin.group.media:
+                label: Media
+                label_catalogue: TNCYSchoolBundle
+                icon: '<i class="fa fa-cogs"></i>'
+                items:
+                    - sonata.media.admin.media
+                    - sonata.media.admin.gallery
+                    - sonata.media.admin.gallery_has_media
 
 
 sonata_block:

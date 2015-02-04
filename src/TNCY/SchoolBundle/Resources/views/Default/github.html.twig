@@ -1,0 +1,69 @@
+{% extends 'TNCYSchoolBundle::layout.html.twig' %}
+{% block title %}{{ "Profil de "| trans}} {{user.firstname}} {{ parent() }}  {% endblock %}
+{% block container %}
+
+	<main role="main" class="main profile">
+		<div class="container target">
+			<div class="row" style="background-image:url('{{ media_public_url(user.background, 'reference') }}');">
+				<div class="col-md-10">
+					<h1 class="">{{user.username}}</h1>
+
+					<button type="button" class="btn btn-info">Envoyer un message</button>
+					<br>
+				</div>
+				<div class="col-md-2">
+					<a href="/users" class="pull-right">
+						<img title="profile image" class="img-circle img-responsive" src="{{ media_public_url(user.avatar, 'reference') }}">
+					</a>
+
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="col-md-12">
+					<ul class="nav nav-pills">
+						<li role="presentation"><a href="#">Home</a></li>
+						<li role="presentation"><a href="#">Profile</a></li>
+						<li role="presentation"><a href="#">Social</a></li>
+						<li role="presentation" class="active"><a href="#">Github</a></li>
+					</ul>
+				</div>
+			</div>
+			<br>
+						{% for repo in repositories %}
+			<div class="row">
+				
+					<!--/col-3-->
+					<div class="col-md-12" style="" >
+							<div class="panel panel-default">
+								<div class="panel-heading">{{repo.name}} 
+{#   #}
+								</div>
+								<div class="panel-body">
+									<ul class="list-group">
+										<li class="list-group-item text-right"><span class="pull-left"><strong class="">Propriétaire:</strong></span> <a href="{{ repo.owner.url }}"></a>{{ repo.owner.login }}</li>
+										<li class="list-group-item text-right"><span class="pull-left"><strong class="">Dernier changement:</strong></span> {{repo.updated_at }}</li>
+										
+
+									</ul>
+
+								</div>
+							</div>
+						{# <pre>{{ repo | json_encode( constant('JSON_PRETTY_PRINT')) | raw }}</pre> #}
+
+						{# {{repositories.}} #}
+					</div>
+
+
+				<div id="push"></div>
+			</div>
+						{% endfor %}
+		</div>
+	</main>
+
+
+{% endblock %}
+{% block javascripts %}
+	{{ parent() }}
+
+{% endblock %}

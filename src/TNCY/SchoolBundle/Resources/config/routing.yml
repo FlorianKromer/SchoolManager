@@ -1,4 +1,12 @@
 tncy_school_index:
     path:     /
     defaults: { _controller: TNCYSchoolBundle:Default:index }
+tncy_school_profile:
+    path:     /user/{id}
+    defaults: { _controller: TNCYSchoolBundle:Default:user }
+
+#github
+tncy_school_repositories:
+    path:     /userRepositories/{id}
+    defaults: { _controller: TNCYSchoolBundle:Github:userRepositories }
 
