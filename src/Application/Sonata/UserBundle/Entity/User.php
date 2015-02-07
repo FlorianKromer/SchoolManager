@@ -32,6 +32,10 @@ class User extends BaseUser
 
     protected $background;
 
+    protected $githubId;
+    
+
+
     public function __construct()
     {
         parent::__construct();
@@ -66,6 +70,29 @@ class User extends BaseUser
      * @return string 
      */
     public function getGithub()
+    {
+        return $this->github;
+    }
+
+    /**
+     * Set github
+     *
+     * @param string $github
+     * @return User
+     */
+    public function setGithubId($github)
+    {
+        $this->github = $github;
+
+        return $this;
+    }
+
+    /**
+     * Get github
+     *
+     * @return string 
+     */
+    public function getGithubId()
     {
         return $this->github;
     }

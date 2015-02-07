@@ -49,7 +49,7 @@ class AppKernel extends Kernel
             new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
 
             //api
-            new Misd\GuzzleBundle\MisdGuzzleBundle(),
+            new HWI\Bundle\OAuthBundle\HWIOAuthBundle(),
 
             new TNCY\SchoolBundle\TNCYSchoolBundle(),
 

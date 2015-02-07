@@ -1,12 +1,15 @@
 tncy_school_index:
     path:     /
     defaults: { _controller: TNCYSchoolBundle:Default:index }
+
+#profile
 tncy_school_profile:
     path:     /user/{id}
-    defaults: { _controller: TNCYSchoolBundle:Default:user }
-
-#github
-tncy_school_repositories:
-    path:     /userRepositories/{id}
-    defaults: { _controller: TNCYSchoolBundle:Github:userRepositories }
+    defaults: { _controller: TNCYSchoolBundle:Profile:user }
+tncy_school_github:
+    path:     /github/{id}
+    defaults: { _controller: TNCYSchoolBundle:Profile:githubUser }
+tncy_school_facebook:
+    path:     /facebook/{id}
+    defaults: { _controller: TNCYSchoolBundle:Profile:facebookUser }
 

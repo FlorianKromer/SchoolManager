@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "2461f1818a4a3032f9c6bde8a8859e13",
+    "hash": "11b44b07e29855fb3858ad49b1614cd7",
     "packages": [
         {
             "name": "cocur/slugify",
@@ -1030,67 +1030,49 @@
             "time": "2014-06-04 14:43:02"
         },
         {
-            "name": "guzzle/guzzle",
-            "version": "v3.9.2",
+            "name": "hwi/oauth-bundle",
+            "version": "dev-master",
+            "target-dir": "HWI/Bundle/OAuthBundle",
             "source": {
                 "type": "git",
-                "url": "https://github.com/guzzle/guzzle3.git",
-                "reference": "54991459675c1a2924122afbb0e5609ade581155"
+                "url": "https://github.com/hwi/HWIOAuthBundle.git",
+                "reference": "a9f88f394e4680d5383b9a129f0e21fc74ca187f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle3/zipball/54991459675c1a2924122afbb0e5609ade581155",
-                "reference": "54991459675c1a2924122afbb0e5609ade581155",
+                "url": "https://api.github.com/repos/hwi/HWIOAuthBundle/zipball/a9f88f394e4680d5383b9a129f0e21fc74ca187f",
+                "reference": "a9f88f394e4680d5383b9a129f0e21fc74ca187f",
                 "shasum": ""
             },
             "require": {
-                "ext-curl": "*",
+                "kriswallsmith/buzz": "~0.7",
                 "php": ">=5.3.3",
-                "symfony/event-dispatcher": "~2.1"
-            },
-            "replace": {
-                "guzzle/batch": "self.version",
-                "guzzle/cache": "self.version",
-                "guzzle/common": "self.version",
-                "guzzle/http": "self.version",
-                "guzzle/inflection": "self.version",
-                "guzzle/iterator": "self.version",
-                "guzzle/log": "self.version",
-                "guzzle/parser": "self.version",
-                "guzzle/plugin": "self.version",
-                "guzzle/plugin-async": "self.version",
-                "guzzle/plugin-backoff": "self.version",
-                "guzzle/plugin-cache": "self.version",
-                "guzzle/plugin-cookie": "self.version",
-                "guzzle/plugin-curlauth": "self.version",
-                "guzzle/plugin-error-response": "self.version",
-                "guzzle/plugin-history": "self.version",
-                "guzzle/plugin-log": "self.version",
-                "guzzle/plugin-md5": "self.version",
-                "guzzle/plugin-mock": "self.version",
-                "guzzle/plugin-oauth": "self.version",
-                "guzzle/service": "self.version",
-                "guzzle/stream": "self.version"
+                "symfony/framework-bundle": "~2.3",
+                "symfony/options-resolver": "~2.1",
+                "symfony/security-bundle": "~2.1",
+                "symfony/yaml": "~2.3"
             },
             "require-dev": {
-                "doctrine/cache": "~1.3",
-                "monolog/monolog": "~1.0",
-                "phpunit/phpunit": "3.7.*",
-                "psr/log": "~1.0",
-                "symfony/class-loader": "~2.1",
-                "zendframework/zend-cache": "2.*,<2.3",
-                "zendframework/zend-log": "2.*,<2.3"
+                "doctrine/orm": "~2.3",
+                "symfony/property-access": "~2.5",
+                "symfony/twig-bundle": "~2.1",
+                "symfony/validator": "~2.1"
             },
-            "type": "library",
+            "suggest": {
+                "doctrine/doctrine-bundle": "to use Doctrine user provider",
+                "friendsofsymfony/user-bundle": "to connect FOSUB with this bundle",
+                "symfony/property-access": "to use FOSUB integration with this bundle",
+                "symfony/twig-bundle": "to use the Twig hwi_oauth_* functions"
+            },
+            "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.9-dev"
+                    "dev-master": "0.4-dev"
                 }
             },
             "autoload": {
                 "psr-0": {
-                    "Guzzle": "src/",
-                    "Guzzle\\Tests": "tests/"
+                    "HWI\\Bundle\\OAuthBundle\\": ""
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1099,27 +1081,68 @@
             ],
             "authors": [
                 {
-                    "name": "Michael Dowling",
-                    "email": "mtdowling@gmail.com",
-                    "homepage": "https://github.com/mtdowling"
+                    "name": "Contributors",
+                    "homepage": "https://github.com/hwi/HWIOAuthBundle/contributors"
                 },
                 {
-                    "name": "Guzzle Community",
-                    "homepage": "https://github.com/guzzle/guzzle/contributors"
+                    "name": "Joseph Bielawski",
+                    "email": "stloyd@gmail.com"
+                },
+                {
+                    "name": "Alexander",
+                    "email": "iam.asm89@gmail.com"
+                },
+                {
+                    "name": "Geoffrey Bachelet",
+                    "email": "geoffrey.bachelet@gmail.com"
                 }
             ],
-            "description": "Guzzle is a PHP HTTP client library and framework for building RESTful web service clients",
-            "homepage": "http://guzzlephp.org/",
+            "description": "Support for authenticating users using both OAuth1.0a and OAuth2 in Symfony2.",
+            "homepage": "http://github.com/hwi/HWIOAuthBundle",
             "keywords": [
-                "client",
-                "curl",
-                "framework",
-                "http",
-                "http client",
-                "rest",
-                "web service"
+                "37signals",
+                "Authentication",
+                "amazon",
+                "bitbucket",
+                "bitly",
+                "box",
+                "dailymotion",
+                "deviantart",
+                "disqus",
+                "dropbox",
+                "eventbrite",
+                "facebook",
+                "firewall",
+                "flickr",
+                "foursquare",
+                "github",
+                "google",
+                "hubic",
+                "instagram",
+                "jira",
+                "linkedin",
+                "mail.ru",
+                "oauth",
+                "oauth1",
+                "oauth2",
+                "odnoklassniki",
+                "qq",
+                "salesforce",
+                "security",
+                "sensio connect",
+                "sina weibo",
+                "stack exchange",
+                "stereomood",
+                "trello",
+                "twitch",
+                "twitter",
+                "vkontakte",
+                "windows live",
+                "wordpress",
+                "yahoo",
+                "yandex"
             ],
-            "time": "2014-08-11 04:32:36"
+            "time": "2015-01-09 16:46:23"
         },
         {
             "name": "imagine/imagine",
@@ -2176,78 +2199,6 @@
             "time": "2014-05-05 02:43:50"
         },
         {
-            "name": "misd/guzzle-bundle",
-            "version": "v1.1.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/misd-service-development/guzzle-bundle.git",
-                "reference": "555c105ef4ac66597a029fe634dee0fe4f9cb084"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/misd-service-development/guzzle-bundle/zipball/555c105ef4ac66597a029fe634dee0fe4f9cb084",
-                "reference": "555c105ef4ac66597a029fe634dee0fe4f9cb084",
-                "shasum": ""
-            },
-            "require": {
-                "guzzle/guzzle": "~3.0",
-                "php": ">=5.3.3",
-                "symfony/framework-bundle": "~2.2"
-            },
-            "conflict": {
-                "jms/serializer-bundle": "<0.11-dev",
-                "sensio/framework-extra-bundle": ">=4.0-dev"
-            },
-            "require-dev": {
-                "doctrine/cache": "~1.0",
-                "jms/serializer-bundle": "~0.11",
-                "phpunit/phpunit": "~4.3",
-                "sensio/framework-extra-bundle": "~2.2",
-                "symfony/monolog-bundle": "~2.2",
-                "symfony/yaml": "~2.2"
-            },
-            "suggest": {
-                "jms/serializer-bundle": "Serialize/deserialize objects to/from XML, JSON and YAML",
-                "sensio/framework-extra-bundle": "Provides a parameter converter",
-                "symfony/monolog-bundle": "Log requests"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Misd\\GuzzleBundle\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Chris Wilkinson",
-                    "email": "chris.wilkinson@admin.cam.ac.uk"
-                }
-            ],
-            "description": "Integrates Guzzle into your Symfony2 application",
-            "homepage": "https://github.com/misd-service-development/guzzle-bundle",
-            "keywords": [
-                "Guzzle",
-                "api",
-                "bundle",
-                "client",
-                "curl",
-                "http",
-                "http client",
-                "rest",
-                "web service"
-            ],
-            "time": "2014-12-01 08:29:51"
-        },
-        {
             "name": "monolog/monolog",
             "version": "1.12.0",
             "source": {
@@ -2782,12 +2733,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataAdminBundle.git",
-                "reference": "fc2219a681f61104cfbc12e90721fffd13296bc0"
+                "reference": "86afaffaeeb2130c32b3a7a7ea6ce9b9a480768d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataAdminBundle/zipball/fc2219a681f61104cfbc12e90721fffd13296bc0",
-                "reference": "fc2219a681f61104cfbc12e90721fffd13296bc0",
+                "url": "https://api.github.com/repos/sonata-project/SonataAdminBundle/zipball/86afaffaeeb2130c32b3a7a7ea6ce9b9a480768d",
+                "reference": "86afaffaeeb2130c32b3a7a7ea6ce9b9a480768d",
                 "shasum": ""
             },
             "require": {
@@ -2855,7 +2806,7 @@
                 "bootstrap",
                 "sonata"
             ],
-            "time": "2015-01-30 00:13:02"
+            "time": "2015-02-02 15:46:10"
         },
         {
             "name": "sonata-project/block-bundle",
@@ -3051,12 +3002,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataCoreBundle.git",
-                "reference": "ab941c34b26481748fd26be2ffa16a478d114976"
+                "reference": "43b5278961b638bbee363033971a984518cc0a92"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataCoreBundle/zipball/ab941c34b26481748fd26be2ffa16a478d114976",
-                "reference": "ab941c34b26481748fd26be2ffa16a478d114976",
+                "url": "https://api.github.com/repos/sonata-project/SonataCoreBundle/zipball/43b5278961b638bbee363033971a984518cc0a92",
+                "reference": "43b5278961b638bbee363033971a984518cc0a92",
                 "shasum": ""
             },
             "require": {
@@ -3108,7 +3059,7 @@
             "keywords": [
                 "sonata"
             ],
-            "time": "2015-01-30 11:31:00"
+            "time": "2015-02-03 14:24:35"
         },
         {
             "name": "sonata-project/datagrid-bundle",
@@ -3516,12 +3467,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataMediaBundle.git",
-                "reference": "0448f58afbfa501fcd35edc87aee038039d77107"
+                "reference": "20700672a6c1fbab7f3e43ede7915b3b0cd57af6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataMediaBundle/zipball/0448f58afbfa501fcd35edc87aee038039d77107",
-                "reference": "0448f58afbfa501fcd35edc87aee038039d77107",
+                "url": "https://api.github.com/repos/sonata-project/SonataMediaBundle/zipball/20700672a6c1fbab7f3e43ede7915b3b0cd57af6",
+                "reference": "20700672a6c1fbab7f3e43ede7915b3b0cd57af6",
                 "shasum": ""
             },
             "require": {
@@ -3595,7 +3546,7 @@
                 "vimeo",
                 "youtube"
             ],
-            "time": "2015-01-27 11:47:30"
+            "time": "2015-02-04 19:10:52"
         },
         {
             "name": "sonata-project/notification-bundle",
@@ -3737,12 +3688,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataUserBundle.git",
-                "reference": "e3710f8f249e64ef59a464fce76b6f8110fab34c"
+                "reference": "c13fb54943abf5e75655b76a90fa5762ef15baae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataUserBundle/zipball/e3710f8f249e64ef59a464fce76b6f8110fab34c",
-                "reference": "e3710f8f249e64ef59a464fce76b6f8110fab34c",
+                "url": "https://api.github.com/repos/sonata-project/SonataUserBundle/zipball/c13fb54943abf5e75655b76a90fa5762ef15baae",
+                "reference": "c13fb54943abf5e75655b76a90fa5762ef15baae",
                 "shasum": ""
             },
             "require": {
@@ -3802,7 +3753,7 @@
                 "sonata",
                 "user"
             ],
-            "time": "2015-01-23 16:30:53"
+            "time": "2015-02-05 17:17:12"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -4039,16 +3990,16 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "v2.6.3",
+            "version": "v2.6.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "c34ef418015793a4653f2670afb69dd167ebf578"
+                "reference": "23b647f1e4eeb24a457d3c47f5f5046377d5a3bf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/c34ef418015793a4653f2670afb69dd167ebf578",
-                "reference": "c34ef418015793a4653f2670afb69dd167ebf578",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/23b647f1e4eeb24a457d3c47f5f5046377d5a3bf",
+                "reference": "23b647f1e4eeb24a457d3c47f5f5046377d5a3bf",
                 "shasum": ""
             },
             "require": {
@@ -4151,7 +4102,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2015-01-07 14:47:29"
+            "time": "2015-02-02 18:02:30"
         },
         {
             "name": "twig/extensions",
@@ -4418,7 +4369,8 @@
         "jms/translation-bundle": 20,
         "jms/di-extra-bundle": 20,
         "friendsofsymfony/jsrouting-bundle": 0,
-        "willdurand/faker-bundle": 0
+        "willdurand/faker-bundle": 0,
+        "hwi/oauth-bundle": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

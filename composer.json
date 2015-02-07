@@ -35,7 +35,7 @@
         "knplabs/knp-menu": "~2.0",
         "knplabs/knp-menu-bundle": "~2.0",
         "willdurand/faker-bundle": "@stable",
-               "misd/guzzle-bundle": "~1.0"
+        "hwi/oauth-bundle": "0.4.*@dev"
 
     },
     "require-dev": {

@@ -11,6 +11,7 @@ imports:
     - { resource: conf.d/faker.yml }
     - { resource: conf.d/classification.yml }
     - { resource: conf.d/media.yml }
+    - { resource: conf.d/oauth.yml }
     - { resource: @TNCYSchoolBundle/Resources/config/admin.yml }
 
 framework:

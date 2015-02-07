@@ -33,3 +33,13 @@ parameters:
     session_port: 11211  
     session_prefix: sess_  
     session_lifetime: 86400  
+
+    #oauth
+    client_github_id: null
+    client_github_secret: null
+    client_google_id: null
+    client_google_secret: null
+    client_facebook_id: null
+    client_facebook_secret: null
+    client_twitter_id: null
+    client_twitter_secret: null
