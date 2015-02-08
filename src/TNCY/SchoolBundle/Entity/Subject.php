@@ -31,20 +31,6 @@ class Subject
     /**
      * @var string
      *
-     * @ORM\Column(name="affinity", type="string", length=255,nullable=true)
-     */
-    private $affinity;
-
-    /**
-     * @var decimal
-     *
-     * @ORM\Column(name="average", type="decimal",nullable=true)
-     */
-    private $average;
-
-    /**
-     * @var string
-     *
      * @ORM\Column(name="theme", type="string", length=255)
      */
     private $theme;
@@ -65,21 +51,6 @@ class Subject
         return $this->name.'('.$this->theme.')';
     }
 
-    /**
-     * @return decimal
-     */
-    public function getAverage()
-    {
-        return $this->average;
-    }
-
-    /**
-     * @param decimal $average
-     */
-    public function setAverage($average)
-    {
-        $this->average = $average;
-    }
 
     /**
      * @return mixed
@@ -149,26 +120,5 @@ class Subject
         return $this->name;
     }
 
-    /**
-     * Set affinity
-     *
-     * @param string $affinity
-     * @return Subject
-     */
-    public function setAffinity($affinity)
-    {
-        $this->affinity = $affinity;
 
-        return $this;
-    }
-
-    /**
-     * Get affinity
-     *
-     * @return string 
-     */
-    public function getAffinity()
-    {
-        return $this->affinity;
-    }
 }

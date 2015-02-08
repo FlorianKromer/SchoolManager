@@ -11,7 +11,6 @@ use Sonata\AdminBundle\Admin\Admin;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Form\FormMapper;
-use TNCY\SchoolBundle\Entity\SchoolClass;
 
 class SubjectAdmin extends Admin
 {
@@ -20,8 +19,6 @@ class SubjectAdmin extends Admin
     {
         $formMapper
             ->add('name', 'text', array('label' => 'name'))
-            ->add('affinity', 'text', array('label' => 'affinity','required' => false))
-            ->add('average', 'text', array('label' => 'average','required' => false))
             ->add('theme', 'text', array('label' => 'theme'))
             ->add('schoolClasses', 'sonata_type_model', array(
                     'multiple' => true,
@@ -37,9 +34,8 @@ class SubjectAdmin extends Admin
     {
         $datagridMapper
             ->add('name')
-            ->add('affinity')
-            ->add('average')
             ->add('theme')
+//            ->add('schoolClasses')
         ;
     }
 
@@ -48,8 +44,7 @@ class SubjectAdmin extends Admin
     {
         $listMapper
             ->addIdentifier('name')
-            ->add('affinity')
-            ->add('average')
+//            ->add('schoolClasses')
             ->add('theme')
         ;
     }

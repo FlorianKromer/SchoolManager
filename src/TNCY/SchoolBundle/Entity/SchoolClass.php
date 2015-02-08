@@ -5,7 +5,7 @@ namespace TNCY\SchoolBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Subject
+ * SchoolClass
  *
  * @ORM\Table(name="schoolclass")
  * @ORM\Entity

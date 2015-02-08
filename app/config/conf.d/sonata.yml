@@ -33,6 +33,7 @@ sonata_admin:
                 items:
                     - sonata.admin.schoolclass
                     - sonata.admin.subject
+                    - sonata.admin.schoolresult
 
             tncyschool.admin.group.classification:
                 label: Classification
