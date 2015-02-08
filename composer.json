@@ -35,7 +35,8 @@
         "knplabs/knp-menu": "~2.0",
         "knplabs/knp-menu-bundle": "~2.0",
         "willdurand/faker-bundle": "@stable",
-        "hwi/oauth-bundle": "0.4.*@dev"
+        "hwi/oauth-bundle": "0.4.*@dev",
+        "facebook/php-sdk-v4" : "4.0.*"
 
     },
     "require-dev": {

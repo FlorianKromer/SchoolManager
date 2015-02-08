@@ -31,9 +31,89 @@ class Subject
     /**
      * @var string
      *
-     * @ORM\Column(name="affinity", type="string", length=255)
+     * @ORM\Column(name="affinity", type="string", length=255,nullable=true)
      */
     private $affinity;
+
+    /**
+     * @var decimal
+     *
+     * @ORM\Column(name="average", type="decimal",nullable=true)
+     */
+    private $average;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="theme", type="string", length=255)
+     */
+    private $theme;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="SchoolClass", inversedBy="subjects")
+     * @ORM\JoinTable(name="subject_schoolclass")
+     **/
+    private $schoolclasses;
+
+
+    public function __construct() {
+        $this->schoolclasses = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    function __toString()
+    {
+        return $this->name.'('.$this->theme.')';
+    }
+
+    /**
+     * @return decimal
+     */
+    public function getAverage()
+    {
+        return $this->average;
+    }
+
+    /**
+     * @param decimal $average
+     */
+    public function setAverage($average)
+    {
+        $this->average = $average;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSchoolclasses()
+    {
+        return $this->schoolclasses;
+    }
+
+    /**
+     * @param mixed $schoolclasses
+     */
+    public function setSchoolclasses($schoolclasses)
+    {
+        $this->schoolclasses = $schoolclasses;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTheme()
+    {
+        return $this->theme;
+    }
+
+    /**
+     * @param string $theme
+     */
+    public function setTheme($theme)
+    {
+        $this->theme = $theme;
+    }
+
+
 
 
     /**

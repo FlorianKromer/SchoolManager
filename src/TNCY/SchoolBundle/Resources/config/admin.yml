@@ -1,2 +1,21 @@
 services:
-
+    sonata.admin.schoolclass:
+        class: TNCY\SchoolBundle\Admin\SchoolClassAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "School", label: "SchoolClass" }
+        arguments:
+            - ~
+            - TNCY\SchoolBundle\Entity\SchoolClass
+            - ~
+        calls:
+            - [ setTranslationDomain, [TNCYSchoolBundle]]
+    sonata.admin.subject:
+        class: TNCY\SchoolBundle\Admin\SubjectAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "School", label: "Subject" }
+        arguments:
+            - ~
+            - TNCY\SchoolBundle\Entity\Subject
+            - ~
+        calls:
+            - [ setTranslationDomain, [TNCYSchoolBundle]]

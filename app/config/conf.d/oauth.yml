@@ -33,7 +33,7 @@ hwi_oauth:
             client_secret:       %client_twitter_secret%
             scope:               ""
 
-    firewall_name: oauth
+    firewall_name: main
 
     fosub:
         # try 30 times to check if a username is available (foo, foo1, foo2 etc)

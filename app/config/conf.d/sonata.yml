@@ -1,6 +1,6 @@
 sonata_admin:
     title:      " "
-    title_logo: bundles/tncyschool/img/logo.png
+    title_logo: bundles/tncyschool/img/logo.jpg
     templates:
         search:              SonataAdminBundle:Core:search.html.twig
         search_result_block: SonataAdminBundle:Block:block_search_result.html.twig
@@ -22,10 +22,18 @@ sonata_admin:
             tncyschool.admin.group.user:
                 label: User
                 label_catalogue: TNCYSchoolBundle
-                icon: '<i class="fa fa-cogs"></i>'
+                icon: '<i class="fa fa-user"></i>'
                 items:
                     - sonata.user.admin.user
                     - sonata.user.admin.group
+            tncyschool.admin.group.school:
+                label: School
+                label_catalogue: TNCYSchoolBundle
+                icon: '<i class="fa fa-briefcase"></i>'
+                items:
+                    - sonata.admin.schoolclass
+                    - sonata.admin.subject
+
             tncyschool.admin.group.classification:
                 label: Classification
                 label_catalogue: TNCYSchoolBundle
@@ -37,7 +45,7 @@ sonata_admin:
             tncyschool.admin.group.media:
                 label: Media
                 label_catalogue: TNCYSchoolBundle
-                icon: '<i class="fa fa-cogs"></i>'
+                icon: '<i class="fa fa-picture-o"></i>'
                 items:
                     - sonata.media.admin.media
                     - sonata.media.admin.gallery

@@ -24,6 +24,12 @@ class UserAdmin extends SonataUserAdmin
                 ->add('github','text',array('required' => false))
                 // ...
             ->end()
+        ->end()
+        ->tab('School')
+            ->with('Profile', array('class' => 'col-md-6'))
+                ->add('schoolClass', 'entity', array('required' => false, 'class' => 'TNCY\SchoolBundle\Entity\SchoolClass'))
+            ->end()
+        ->end()
         ;
     }
     protected function configureShowFields(ShowMapper $showMapper)

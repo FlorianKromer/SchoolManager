@@ -28,13 +28,43 @@ class SchoolClass
      */
     private $name;
 
+    /**
+     * @ORM\ManyToMany(targetEntity="Subject", mappedBy="schoolclasses")
+     **/
+    private $subjects;
 
+    public function __construct()
+    {
+        $this->subjects = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSubjects()
+    {
+        return $this->subjects;
+    }
+
+    /**
+     * @param mixed $subjects
+     */
+    public function setSubjects($subjects)
+    {
+        $this->subjects = $subjects;
+    }
+
+
+    function __toString()
+    {
+        return $this->name;
+    }
 
 
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -57,7 +87,7 @@ class SchoolClass
     /**
      * Get name
      *
-     * @return string 
+     * @return string
      */
     public function getName()
     {

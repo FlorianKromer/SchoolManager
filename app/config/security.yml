@@ -35,7 +35,7 @@ security:
 
         # This firewall is used to handle the public login area
         # This part is handled by the FOS User Bundle
-        main:
+        old-main:
             pattern:             .*
             context:             user
             form_login:
@@ -47,7 +47,7 @@ security:
             logout:             true
             anonymous:          true
 
-        oauth:
+        main:
             pattern:    ^/
             form_login:
                 provider: fos_userbundle
