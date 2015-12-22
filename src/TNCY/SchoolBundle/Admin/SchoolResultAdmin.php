@@ -12,7 +12,7 @@ use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Form\FormMapper;
 use TNCY\SchoolBundle\Entity\SchoolClass;
-
+use TNCY\SchoolBundle\Entity\SchoolResult;
 class SchoolResultAdmin extends Admin
 {
     // Fields to be shown on create/edit forms
@@ -31,8 +31,8 @@ class SchoolResultAdmin extends Admin
                     'btn_delete'    => false,             //or hide the button.
                 ))
 
-            ->add('affinity', 'text', array('label' => 'affinity'))
-            ->add('average', 'number', array('label' => 'average'))
+            ->add('affinity', 'choice', array('label' => 'Affinity','choices'=>SchoolResult::$AFFINITY))
+            ->add('average', 'number', array('label' => 'Average'))
 
         ;
     }

@@ -12,6 +12,9 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Subject
 {
+    public static  $THEMES = array('SEHS'=>'SEHS','STIC'=>'STIC','SFA'=>'SFA');
+
+
     /**
      * @var integer
      *

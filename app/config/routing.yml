@@ -1,6 +1,3 @@
-app:
-    resource: @AppBundle/Controller/
-    type:     annotation
 
 tncy_school:
     resource: "@TNCYSchoolBundle/Resources/config/routing.yml"
@@ -29,8 +26,6 @@ github_login:
 
 twitter_login:
     pattern: /login/check-twitter
-
-
 
 
 

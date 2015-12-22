@@ -21,7 +21,7 @@ parameters:
     # Mail
     
     # Destinataire de tous les mails en mode DEV
-    mail_dev_delivery_address : webadmin@nvision.lu
+    mail_dev_delivery_address : webadmin@toto.fr
 
     # Request Context Globally
     router.request_context.host: example.org

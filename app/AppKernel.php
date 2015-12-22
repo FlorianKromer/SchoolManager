@@ -51,9 +51,7 @@ class AppKernel extends Kernel
             //api
             new HWI\Bundle\OAuthBundle\HWIOAuthBundle(),
 
-            new TNCY\SchoolBundle\TNCYSchoolBundle(),
-
-            new AppBundle\AppBundle(),
+            new TNCY\SchoolBundle\TNCYSchoolBundle()
 
 
         );

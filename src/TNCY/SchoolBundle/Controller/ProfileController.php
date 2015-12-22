@@ -11,12 +11,20 @@ use Facebook\FacebookRedirectLoginHelper;
 
 class ProfileController extends Controller
 {
+
     /**
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function indexAction()
+    public function marksAction($id)
     {
-        return $this->render('TNCYSchoolBundle:Default:index.html.twig');
+        $userManager = $this->get('fos_user.user_manager');
+
+        $user = $userManager->find($id);
+
+        if (!$user) {
+            throw $this->createNotFoundException('The user does not exist');
+        }
+        return $this->render('TNCYSchoolBundle:Profile:profile_school.html.twig',array("user"=>$user));
     }
 
     /**
@@ -34,7 +42,7 @@ class ProfileController extends Controller
             throw $this->createNotFoundException('The user does not exist');
         }
 
-        return $this->render('TNCYSchoolBundle:Default:profile_home.html.twig',array("user"=>$user));
+        return $this->render('TNCYSchoolBundle:Profile:profile_home.html.twig',array("user"=>$user));
     }
 
     /**
@@ -53,7 +61,7 @@ class ProfileController extends Controller
         }
 
         $repositories = $this->getGithubUserRepositories($user->getGithub());
-        return $this->render('TNCYSchoolBundle:Default:profile_github.html.twig',array("user"=>$user,"repositories"=>json_decode($repositories,true)));
+        return $this->render('TNCYSchoolBundle:Profile:profile_github.html.twig',array("user"=>$user,"repositories"=>json_decode($repositories,true)));
     }
 
     /**
@@ -112,7 +120,7 @@ class ProfileController extends Controller
 
         }
 //        $facebook = $this->getFacebookUserInformations($user->getFacebookUid());
-        return $this->render('TNCYSchoolBundle:Default:profile_social.html.twig',array("user"=>$user,"facebook"=>json_decode($response->getRawResponse(),true)));
+        return $this->render('TNCYSchoolBundle:Profile:profile_social.html.twig',array("user"=>$user,"facebook"=>json_decode($response->getRawResponse(),true)));
     }
     /**
      * @param $name

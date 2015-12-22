@@ -37,12 +37,15 @@ class MenuBuilder
 
         $menu = $this->factory->createItem('root');
         $menu->setChildrenAttributes(array('class' => 'nav navbar-nav navbar-right'));
-        $menu->addChild('index', array('route' => 'tncy_school_index'));
+        $menu->addChild('Accueil', array('route' => 'tncy_school_index'));
+        $menu->addChild('News', array('route' => 'tncy_school_news'));
+        $menu->addChild('À propos', array('route' => 'tncy_school_about'));
+        $menu->addChild('Contact', array('route' => 'tncy_school_contact'));
 
         if($this->securityContext->isGranted('IS_AUTHENTICATED_FULLY'))
             $menu->addChild($user->getUsername(), ['route' => 'tncy_school_profile','routeParameters' => array('id' => $user->getId())]);
         else
-            $menu->addChild('login', array('route' => 'hwi_oauth_connect'));
+            $menu->addChild('Connexion', array('route' => 'hwi_oauth_connect'));
 
         return $menu;
     }

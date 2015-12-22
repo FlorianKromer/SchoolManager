@@ -17,11 +17,18 @@ class SchoolClassAdmin extends Admin
     // Fields to be shown on create/edit forms
     protected function configureFormFields(FormMapper $formMapper)
     {
+        $q = $this->modelManager->getEntityManager('TNCY\SchoolBundle\Entity\Subject')
+            ->createQuery('SELECT s
+            FROM TNCY\SchoolBundle\Entity\Subject s');
         $formMapper
             ->add('name', 'text', array('label' => 'Nom'))
             ->add('subjects', 'sonata_type_model', array(
                     'multiple' => true,
                     'required' => false,
+                    'by_reference' => false,
+                    'empty_value' => 'Choose an subject',
+                    'query' => $q,
+                    'compound' => false,
                     'class' => 'TNCY\SchoolBundle\Entity\Subject'
                 ))
         ;

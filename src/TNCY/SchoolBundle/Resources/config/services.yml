@@ -5,6 +5,7 @@ services:
 #    tncy_school.example:
 #        class: %tncy_school.example.class%
 #        arguments: [@service_id, "plain_value", %parameter%]
+
     tncy_school.menu_builder:
         class: TNCY\SchoolBundle\Menu\MenuBuilder
         arguments: ["@knp_menu.factory","@translator","@security.context"]

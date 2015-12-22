@@ -1,5 +1,4 @@
 hwi_oauth:
-
     resource_owners:
         github:
             type:                github
@@ -13,8 +12,8 @@ hwi_oauth:
             type:                google
             client_id:           %client_google_id%
             client_secret:       %client_google_secret%
-            scope:               "https://www.googleapis.com/auth/userinfo.profile"
-            user_response_class: \Our\Custom\Response\Class
+            scope:               "https://www.googleapis.com/auth/plus.login"
+            # user_response_class: \Our\Custom\Response\Class
             paths:
                 email:           email
                 profilepicture:  picture

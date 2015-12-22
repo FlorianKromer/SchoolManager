@@ -11,6 +11,7 @@ use Sonata\AdminBundle\Admin\Admin;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Form\FormMapper;
+use TNCY\SchoolBundle\Entity\Subject;
 
 class SubjectAdmin extends Admin
 {
@@ -19,13 +20,13 @@ class SubjectAdmin extends Admin
     {
         $formMapper
             ->add('name', 'text', array('label' => 'name'))
-            ->add('theme', 'text', array('label' => 'theme'))
+            ->add('theme', 'choice', array('label' => 'theme','choices'=>Subject::$THEMES))
             ->add('schoolClasses', 'sonata_type_model', array(
                     'multiple' => true,
                     'required' => false,
+                    'btn_delete'    => false,             //or hide the button.
                     'class' => 'TNCY\SchoolBundle\Entity\SchoolClass'
                 ))
-
         ;
     }
 

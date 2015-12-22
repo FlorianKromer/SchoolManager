@@ -12,6 +12,8 @@ use Application\Sonata\UserBundle\Entity\User;
  */
 class SchoolResult
 {
+    public static  $AFFINITY = array('VERY GOOD'=>'VERY GOOD','GOOD'=>'GOOD','INTERMEDIATE'=>'INTERMEDIATE','NOOB'=>'NOOB');
+
     /**
      * @var integer
      *

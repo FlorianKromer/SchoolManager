@@ -6,7 +6,7 @@ bazinga_faker:
         TNCY\SchoolBundle\Entity\Subject:
              number: 22
              custom_formatters:
-                 name: { method: randomElement, parameters: [ ['SEHS','STIC','tail ']]}
+                 name: { method: randomElement, parameters: [ ['SEHS','STIC','SFA']]}
                  name: { method: randomElement, parameters: [ ['Anglais','Base de Données Relationnelles','C-Shell','Compilation','Comptabilité  ','Initiation  à  Matlab','Introduction aux Applications de linformatique','Introduction aux Réseaux Locaux','Macroéconomie','Management des organisations','Mathématiques Appliquées  pour linformatique','Mathématiques Générales  (remise  à  niveau)','Mathématiques Numériques','Modèle des Systèmes à Evenements discrets','Principes Fondamentaux des Systèmes  ','Probabilités','Réseaux et Services Internet','Signal','Systèmes dExploitation','Techniques dExpression et Communication','Techniques et  Outils pour Programmer  ','Traitements Audio Numérique'] ] }
         Application\Sonata\UserBundle\Entity\User:
             number: 5
